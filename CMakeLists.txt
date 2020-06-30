@@ -6,6 +6,10 @@ if(APPLE AND NOT IOS)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -arch x86_64 -F/Library/Frameworks")
 endif()
 
+set(DONT_HAVE_FRIBIDI_CONFIG_H ON)
+add_definitions(-DDONT_HAVE_FRIBIDI_CONFIG_H=${DONT_HAVE_FRIBIDI_CONFIG_H})
+add_compile_definitions(DONT_HAVE_FRIBIDI_CONFIG_H)
+
 set(libfribidi_headers
     lib/fribidi-arabic.h
     lib/fribidi-begindecls.h
@@ -23,7 +27,6 @@ set(libfribidi_headers
     lib/fribidi-shape.h
     lib/fribidi-types.h
     lib/fribidi-unicode.h
-    ${PROJECT_BINARY_DIR}/include/fribidi-unicode-version.h
     lib/fribidi.h
 )
 

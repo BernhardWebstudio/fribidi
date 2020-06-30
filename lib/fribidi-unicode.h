@@ -37,6 +37,8 @@
 #define FRIBIDI_UNICODE_CHARS	(sizeof(FriBidiChar) >= 4 ? 0x110000 : 0xFFFE)
 
 /* Unicode version - FRIBIDI_UNICODE_VERSION */
+// TODO: move next line to cmake
+#define DONT_HAVE_FRIBIDI_UNICODE_VERSION_H
 #ifdef DONT_HAVE_FRIBIDI_UNICODE_VERSION_H
 # define FRIBIDI_UNICODE_VERSION "unknown"
 #else /* !DONT_HAVE_FRIBIDI_UNICODE_VERSION_H */

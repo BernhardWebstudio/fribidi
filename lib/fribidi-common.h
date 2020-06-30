@@ -26,6 +26,8 @@
 #ifndef _FRIBIDI_COMMON_H
 #define _FRIBIDI_COMMON_H
 
+// TODO: move next line to cmake
+#define DONT_HAVE_FRIBIDI_CONFIG_H
 #ifdef DONT_HAVE_FRIBIDI_CONFIG_H
 # define FRIBIDI "fribidi"
 # define FRIBIDI_NAME "fribidi"
