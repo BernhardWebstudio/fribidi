@@ -86,7 +86,7 @@ merge_with_prev (
     second->next_isolate->prev_isolate = first;
   first->next_isolate = second->next_isolate;
 
-  fribidi_free (second);
+  free (second);
   return first;
 }
 
@@ -490,7 +490,7 @@ static void free_pairing_nodes(FriBidiPairingNode *nodes)
     {
       FriBidiPairingNode *p = nodes;
       nodes = nodes->next;
-      fribidi_free(p);
+      free(p);
     }
 }
 
@@ -1188,7 +1188,7 @@ fribidi_get_par_embedding_levels_ex (
           int i;
           /* Only need to free the non static members */
           for (i=LOCAL_BRACKET_SIZE; i<num_iso_levels; i++)
-            fribidi_free(bracket_stack[i]);
+            free(bracket_stack[i]);
         }
 
       /* Remove the bracket property and re-compact */

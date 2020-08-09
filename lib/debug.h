@@ -29,9 +29,9 @@
 
 #include "common.h"
 
-#include <fribidi-types.h>
+#include "fribidi-types.h"
 
-#include <fribidi-begindecls.h>
+#include "fribidi-begindecls.h"
 
 #ifdef DEBUG
 
@@ -107,7 +107,7 @@
 
 #endif /* !DEBUG */
 
-#include <fribidi-enddecls.h>
+#include "fribidi-enddecls.h"
 
 #endif /* !_DEBUG_H */
 /* Editor directions:
